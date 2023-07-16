@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--By using this meta tag, you're specifying that the webpage should adjust its width to match the screen size
+     of the device and should not have an initial zoom level other  than 1.0. This helps in creating a responsive 
+     design that is suitable for various devices, including desktops, laptops, tablets, and mobile phones.-->
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="calculator">
+
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+
+                    <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)"
+                        class="operator">
+
+                    <!--display.value refers to the value of an element with the id "display". This suggests that 
+                there should be an element with the id "display" somewhere in the HTML code.
+                toString() is a method that converts the value of display.value into a string. This step 
+                is necessary because the slice() method works on strings.
+                slice(0, -1) is a string manipulation method that extracts a portion of a string. In this
+                case, it extracts all characters from index 0 to the second-to-last character (excluding 
+                 the last character). Essentially, it removes the last character from the string.-->
+
+                    <input type="button" value="." onclick="display.value += '.'" class="operator">
+                    <input type="button" value="/" onclick="display.value += '/'" class="operator">
+
+                </div>
+
+                <div>
+
+                    <input type="button" value="7" onclick="display.value += '7'"> <!--t3 name mchi class-->
+                    <input type="button" value="8" onclick="display.value += '8'">
+                    <input type="button" value="9" onclick="display.value += '9'">
+                    <input type="button" value="*" onclick="display.value += '*'" class="operator">
+
+
+                </div>
+
+                <div>
+
+                    <input type="button" value="4" onclick="display.value += '4'">
+                    <input type="button" value="5" onclick="display.value += '5'">
+                    <input type="button" value="6" onclick="display.value += '6'">
+                    <input type="button" value="-" onclick="display.value += '-'" class="operator">
+
+                </div>
+
+                <div>
+
+                    <input type="button" value="1" onclick="display.value += '1'">
+                    <input type="button" value="2" onclick="display.value += '2'">
+                    <input type="button" value="3" onclick="display.value += '3'">
+                    <input type="button" value="+" onclick="display.value += '+'" class="operator">
+
+                </div>
+
+                <div>
+
+                    <input type="button" value="00" onclick="display.value += '00' ">
+                    <input type="button" value="0" onclick="display.value += '0' ">
+                    <input type="button" value="=" class="equal" onclick="display.value = eval(display.value)">
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

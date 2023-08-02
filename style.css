@@ -53,3 +53,9 @@ form input.equal{
     color: #05d47a;
 
  }
+
+@media (max-width: 768px) {
+  .calculator form input {
+    width: calc(20% - 20px); 
+  }
+}
